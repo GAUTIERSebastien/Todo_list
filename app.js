@@ -1,11 +1,10 @@
-// app.js
 const express = require('express');
 const path = require('path');
 const router = require('./routing');
 
 const app = express();
 
-// Ajouter ces lignes
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

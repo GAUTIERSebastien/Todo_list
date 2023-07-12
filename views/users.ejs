@@ -3,18 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Accueil</title>
+    <title>Utilisateurs</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Accueil</h1>
+    <h1>Liste d'utilisateurs</h1>
     <nav>
         <a href="/home">Accueil</a>
         <a href="/users">Liste d'utilisateurs</a>
         <a href="/create-user">Créer un utillisateur</a>
     </nav>
-    <script src="../app.js"></script>
+    <ul>
+        <% users.forEach(user=> { %>
+            <li>
+                <%= user.name %>
+            </li>
+            <% }); %>
+    </ul>
 </body>
 
 </html>
