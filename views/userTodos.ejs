@@ -3,25 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Utilisateurs</title>
+    <title>Tâches de <%= user.name %>
+    </title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Liste d'utilisateurs</h1>
+    <h1>Tâches de <%= user.name %>
+    </h1>
     <nav>
         <a href="/home">Accueil</a>
         <a href="/users">Liste d'utilisateurs</a>
-        <a href="/create-user">Créer un utillisateur</a>
+        <a href="/create-user">Créer un utilisateur</a>
     </nav>
     <ul>
-        <% users.forEach(user=> { %>
-            <li><a href="/users/<%= user.id %>/todos">
-                    <%= user.name %>
-                </a></li>
+        <% user.todos.forEach(todo=> { %>
+            <li>
+                <%= todo.title %> (<%= todo.status %>)
+            </li>
             <% }); %>
     </ul>
-
 </body>
 
 </html>

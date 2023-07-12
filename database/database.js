@@ -35,8 +35,9 @@ function getUsers() {
 
 function getUser(userId) {
   const data = getData();
-  return data.users.find(user => user.id === userId);
+  return data.users.find(user => user.id === Number(userId));
 }
+
 
 module.exports = {
   addUser,
