@@ -4,15 +4,30 @@ body {
   padding: 0;
   background-color: #f0f0f0;
 }
-
+nav{
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+nav a{
+  text-decoration: none;
+}
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #333;
+}
+h1{
+  font-size: 4rem ;
+  display: flex;
+  justify-content: center;
 }
 
 button {

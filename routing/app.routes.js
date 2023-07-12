@@ -7,6 +7,7 @@ const {
 } = require('../controllers/app.ctrl');
 
 router.get('/', homeCtrl);
+router.get('/home', homeCtrl);
 router.get('/users', usersCtrl);
 router.get('/create-user', createUser);
 router.post('/create-user', postCreateUser);
