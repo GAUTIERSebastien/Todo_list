@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Alice",
+            "todos": [
+                {
+                    "id": 1,
+                    "title": "Faire les courses",
+                    "status": "todo",
+                    "category": "personnel"
+                },
+                {
+                    "id": 2,
+                    "title": "Réviser pour le test",
+                    "status": "done",
+                    "category": "travail"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Bob",
+            "todos": [
+                {
+                    "id": 1,
+                    "title": "Réparer le vélo",
+                    "status": "todo",
+                    "category": "personnel"
+                }
+            ]
+        }
+    ]
+}

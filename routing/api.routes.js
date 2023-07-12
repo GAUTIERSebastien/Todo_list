@@ -1,12 +1,14 @@
 const router = require('express').Router();
 const {
+  getUsers,
+  createUser,
   getTodos,
-  createTodo,
-  editTodo
+  createTodo
 } = require('../controllers/api.ctrl');
 
-router.get('/todos', getTodos);
-router.post('/todos', createTodo);
-router.put('/todos/:id', editTodo);
+router.get('/users', getUsers);
+router.post('/users', createUser);
+router.get('/users/:userId/todos', getTodos);
+router.post('/users/:userId/todos', createTodo);
 
 module.exports = router;

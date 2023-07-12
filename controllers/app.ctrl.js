@@ -1,14 +1,21 @@
-const { resolve } = require('path');
+const { addUser, getUsers } = require('../database/database');
 
 exports.homeCtrl = (req, res) => {
-  res.sendFile( resolve('public', 'home.html') );
+  res.render('home');
 };
 
-exports.servicesCtrl = (req, res) => {
-  // Connexion à la BDD
-  // Récupération des livres
-  // Vérification de la cnx
-  res.end('Services');
+exports.usersCtrl = (req, res) => {
+  // Utilisez votre fonction pour récupérer les utilisateurs de votre base de données
+  const users = getUsers();
+  res.render('users', { users: users });
 };
 
-exports.contactCtrl = (req, res) => res.end('Contact');
+exports.createUser = (req, res) => {
+  res.render('createUser');
+};
+
+exports.postCreateUser = (req, res) => {
+  const name = req.body.name;
+  addUser(name);
+  res.redirect('/users');
+};

@@ -1,10 +1,15 @@
-const { resolve } = require('path');
+// app.js
 const express = require('express');
-const app = express();
+const path = require('path');
 const router = require('./routing');
 
-// CONFIGURATION DE L'APP
-app.use( express.static(resolve('public')) );
-app.use( router );
+const app = express();
+
+// Ajouter ces lignes
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(router);
 
 module.exports = app;

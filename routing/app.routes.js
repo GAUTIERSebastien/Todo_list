@@ -1,12 +1,14 @@
 const router = require('express').Router();
 const {
   homeCtrl,
-  servicesCtrl,
-  contactCtrl,
+  usersCtrl,
+  createUser,
+  postCreateUser
 } = require('../controllers/app.ctrl');
 
-router.get('/home', homeCtrl);
-router.get('/services', servicesCtrl);
-router.get('/contact', contactCtrl);
+router.get('/', homeCtrl);
+router.get('/users', usersCtrl);
+router.get('/create-user', createUser);
+router.post('/create-user', postCreateUser);
 
 module.exports = router;
