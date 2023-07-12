@@ -1,7 +1,3 @@
-// exports.getTodos = (req, res) => res.end();
-// exports.createTodo = (req, res) => res.end();
-// exports.editTodo = (req, res) => res.end();
-
 const { addUser, addTodo, getUsers, getUser } = require('../database/database');
 
 exports.getUsers = (req, res) => {
