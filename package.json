@@ -1,7 +1,6 @@
 {
   "name": "cours-nodejs",
   "version": "0.0.0-beta.0",
-  "description": "",
   "main": "bin/www",
   "scripts": {
     "start": "cross-env NODE_ENV=production node bin/www",
@@ -16,5 +15,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GAUTIERSebastien/Todo_list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GAUTIERSebastien/Todo_list/issues"
+  },
+  "homepage": "https://github.com/GAUTIERSebastien/Todo_list#readme",
+  "description": ""
 }
